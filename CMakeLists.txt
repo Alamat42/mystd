@@ -5,12 +5,11 @@ project(mystd
     LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED YES)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_library(mystd INTERFACE)
 
-target_include_directories(mystd INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_include_directories(mystd INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+target_link_libraries(mystd INTERFACE forward_list)
