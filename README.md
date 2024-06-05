@@ -2,10 +2,10 @@
 My educational implementation of C++ STL containers.
 This library uses concepts that are added in the С++20.
 
-#Now implemented
+# Now implemented
 - forward list with support for iterators and custom allocators
 
-##How to use
+## How to use
 If you are using cmake, add these commands to your CMakeLists.txt:
 ```
 add_subdirectory(${PATH_TO_THE_LIB}/mystd)
@@ -19,7 +19,7 @@ After that, you will be able to include the library headers:
 The library uses the namespace `mystd` and CamelCase in container names. 
 The names of the methods correspond to the interface of the STL containers.
 
-##Simple sample:
+## Simple sample:
 ```
 #include <iostream>
 #include <numeric>
